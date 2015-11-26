@@ -4,12 +4,14 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.os.Build;
 import android.util.AttributeSet;
-import android.view.View;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.widget.LinearLayout;
 
 /**
  * Created by LearnerMN on 11/20/15.
  */
-public class MainView extends View{
+public class MainView extends LinearLayout{
 
     public MainView(Context context) {
         super(context);
@@ -28,4 +30,9 @@ public class MainView extends View{
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        Log.e(">>>>>>>>>: ","'Arai iishee orood irchij bga yum bish biz de");
+        return super.onKeyDown(keyCode, event);
+    }
 }
